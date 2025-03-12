@@ -1,0 +1,483 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16593,        475]
+NotebookOptionsPosition[     12726,        390]
+NotebookOutlinePosition[     13143,        407]
+CellTagsIndexPosition[     13100,        404]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Project Euler", "Title",
+ CellChangeTimes->{{3.9505977453339977`*^9, 
+  3.950597748319475*^9}},ExpressionUUID->"afe83d3e-9c5d-934a-a95e-\
+9e4bafb7161b"],
+
+Cell["Problem 1. Multiples of 3 or 5", "Subtitle",
+ CellChangeTimes->{{3.950597763579922*^9, 3.950597792317854*^9}, {
+  3.950598730223118*^9, 3.950598731293747*^9}, {3.9506888878976727`*^9, 
+  3.9506889136534367`*^9}, {3.9506889565739594`*^9, 
+  3.9506889568827095`*^9}},ExpressionUUID->"72b43898-0a28-2b44-afec-\
+51da70d0cdcc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Total", "@@", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Divisible", "[", 
+         RowBox[{"#", ",", "3"}], "]"}], "||", 
+        RowBox[{"Divisible", "[", 
+         RowBox[{"#", ",", "5"}], "]"}]}], ",", "#", ",", "0"}], "]"}], "&"}],
+     "/@", 
+    RowBox[{"Range", "[", "999", "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.950688951347975*^9, 3.950688951347975*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"2f9a631b-e002-724c-b8a5-a4f02f74b4e1"],
+
+Cell[BoxData["233168"], "Output",
+ CellChangeTimes->{3.950688953250555*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"46f73280-9049-9642-a2a4-e5435d771b64"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 2. Even Fibonacci Numbers", "Subtitle",
+ CellChangeTimes->{{3.950598743056395*^9, 3.9505987469467797`*^9}, {
+  3.9505987856163187`*^9, 3.9505987944238987`*^9}, {3.9506888830494843`*^9, 
+  3.950688885062418*^9}},ExpressionUUID->"06cfa948-2272-7a42-a71d-\
+476e2fa8de6b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"fib", "[", "1", "]"}], "=", "1"}], ";", 
+  RowBox[{
+   RowBox[{"fib", "[", "2", "]"}], "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fib", "[", 
+    RowBox[{"n_Integer", "/;", 
+     RowBox[{"n", ">", "2"}]}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"fib", "[", "n", "]"}], "=", 
+    RowBox[{
+     RowBox[{"fib", "[", 
+      RowBox[{"n", "-", "1"}], "]"}], "+", 
+     RowBox[{"fib", "[", 
+      RowBox[{"n", "-", "2"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"FoldWhile", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Plus", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Boole", "@", 
+        RowBox[{"EvenQ", "@", 
+         RowBox[{"fib", "[", "#2", "]"}]}]}], "*", 
+       RowBox[{"(", 
+        RowBox[{"fib", "[", "#2", "]"}], ")"}]}], ",", "#1"}], "]"}], "&"}], 
+   ",", "0", ",", 
+   RowBox[{"Range", "[", "4000000", "]"}], ",", 
+   RowBox[{
+    RowBox[{"TrueQ", "[", 
+     RowBox[{"#", "<=", "4000000"}], "]"}], "&"}]}], "]"}]}], "Input",
+ CellLabel->"In[4]:=",ExpressionUUID->"e925536f-ca4c-a044-9302-ae34bd43459d"],
+
+Cell[BoxData["4613732"], "Output",
+ CellChangeTimes->{3.950688218592373*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"6219ea1e-3ecd-ce40-a1dd-d1252a83970a"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 3. Largest Prime Factor", "Subtitle",
+ CellChangeTimes->{{3.950688192769363*^9, 3.9506882106764793`*^9}, {
+  3.9507494585510406`*^9, 
+  3.950749459916975*^9}},ExpressionUUID->"2c198477-d3f4-b64e-a684-\
+2fc6e48857ae"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TakeLargest", "[", 
+  RowBox[{
+   RowBox[{"Flatten", "@", 
+    RowBox[{"FactorInteger", "@", "600851475143"}]}], ",", "1"}], 
+  "]"}]], "Input",
+ CellLabel->"In[15]:=",ExpressionUUID->"15ad4b24-c9fe-7e4e-9fc8-c320aef2f7a1"],
+
+Cell[BoxData[
+ RowBox[{"{", "6857", "}"}]], "Output",
+ CellChangeTimes->{3.950688429630327*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"2f05d64c-065e-9c4f-aa77-37da1fbb0e94"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 4. Largest Palindrome Product", "Subtitle",
+ CellChangeTimes->{{3.950688462101412*^9, 
+  3.950688484684021*^9}},ExpressionUUID->"85e9be4c-e61b-4c43-b1f8-\
+5156eeaf23eb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"TakeLargest", "[", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"i", " ", "j"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"10", "^", "2"}], ",", 
+          RowBox[{
+           RowBox[{"10", "^", "3"}], "-", "1"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", 
+          RowBox[{"10", "^", "2"}], ",", 
+          RowBox[{
+           RowBox[{"10", "^", "3"}], "-", "1"}]}], "}"}]}], "]"}]}], ",", 
+     "PalindromeQ"}], "]"}], ",", "1"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"The", " ", "table", " ", "must", " ", "be", " ", "flattened"}], 
+   "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.950688857543106*^9, 3.9506888689186745`*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"d51e916d-fb3f-974a-8ee4-6739963102a7"],
+
+Cell[BoxData[
+ RowBox[{"{", "906609", "}"}]], "Output",
+ CellChangeTimes->{3.950688844339487*^9, 3.9506889862584343`*^9},
+ CellLabel->"Out[25]=",ExpressionUUID->"f94f50da-53e8-f94d-b57a-ce988013bd1a"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 5. Smallest Multiple", "Subtitle",
+ CellChangeTimes->{{3.950744799281828*^9, 3.950744802712906*^9}, 
+   3.9507448331379433`*^9},ExpressionUUID->"0147fab4-cd61-9d4a-8522-\
+9977b9400f45"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Apply", "[", 
+  RowBox[{"Times", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "^", 
+      RowBox[{"Max", "[", 
+       RowBox[{"Last", "/@", 
+        RowBox[{"Cases", "[", 
+         RowBox[{
+          RowBox[{"Flatten", "[", 
+           RowBox[{
+            RowBox[{"FactorInteger", "/@", 
+             RowBox[{"Range", "[", "20", "]"}]}], ",", "1"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"#", ",", "_"}], "}"}]}], "]"}]}], "]"}]}], "&"}], "/@", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Prime", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"PrimePi", "[", "20", "]"}]}], "}"}]}], "]"}]}]}], 
+  "]"}]], "Input",
+ CellLabel->"In[31]:=",ExpressionUUID->"ce895a85-d216-564c-baeb-bc22758c9cec"],
+
+Cell[BoxData["232792560"], "Output",
+ CellChangeTimes->{3.9507448519486027`*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"8926d42b-e3b1-f541-9463-22b0179b0f30"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 6. Sum Square Difference", "Subtitle",
+ CellChangeTimes->{{3.950748536671316*^9, 
+  3.9507485462423325`*^9}},ExpressionUUID->"7797d9e1-2c52-3f49-b310-\
+f710195474d4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sum", "[", 
+    RowBox[{"i", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "100"}], "}"}]}], "]"}], "^", "2"}], "-", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{"i", "^", "2"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "100"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.950748564858961*^9, 3.950748585990282*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"273e25dd-9d6b-0841-ab35-c9e5c0e452b0"],
+
+Cell[BoxData["25164150"], "Output",
+ CellChangeTimes->{3.950748593504423*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"a847196a-1673-0045-9d3d-b02537d2e1ff"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 7. 10 001st Prime", "Subtitle",
+ CellChangeTimes->{{3.9507486469691124`*^9, 
+  3.950748654949049*^9}},ExpressionUUID->"4e407fd9-3dfb-224f-9706-\
+858e2b5cd31b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Prime", "[", "10001", "]"}]], "Input",
+ CellChangeTimes->{{3.9507486571376305`*^9, 3.9507486610995884`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"440516ce-0215-c940-877b-36b624891dbe"],
+
+Cell[BoxData["104743"], "Output",
+ CellChangeTimes->{3.950748662360672*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"caebf9dd-977c-6f4c-bfbf-52352d082f13"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 8. Largest Product in a Series", "Subtitle",
+ CellChangeTimes->{{3.950749312962536*^9, 
+  3.9507493363482914`*^9}},ExpressionUUID->"db8a267e-6ba3-2b42-8e60-\
+c0ef7fb87d71"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"num", "=", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       RowBox[{"Integer", "[", 
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["464", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    73167176531330624919225119674426574742355349194934969835203127745063262395\
+783180169848018694788518438586156078911294949545950173795833195285320880551112\
+540698747158523863050715693290963295227443043557668966489504452445231617318564\
+030987111217223831136222989342338030813533627661428280644448664523874930358907\
+296290491560440772390713810515859307960866701724271218839987979087922749219016\
+997208880937766572733300105336788122023542180975125454059475224352584907711670\
+556013604839586446706324415722155397536978179778461740649551492908625693219784\
+686224828397224137565705605749026140797296865241453510047482166370484403199890\
+008895243450658541227588666881164271714799244429282308634656748139191231628245\
+861786645835912456652947654568284891288314260769004224219022671055626321111109\
+370544217506941658960408071984038509624554443629812309878799272442849091888458\
+015616609791913387549920052406368991256071760605886116467109405077541002256983\
+15520005593572972571636269561882670428252483600823257530420752963450,
+    SelectWithContents->True,
+    Selectable->False]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Max", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Times", "@@", "#"}], "&"}], "/@", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"IntegerDigits", "[", "num", "]"}], ",", "13", ",", "1"}], 
+    "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.950749365216427*^9, 3.9507493951792736`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"c61ceb95-b5c2-874b-8f9e-e1a13e401415"],
+
+Cell[BoxData["23514624000"], "Output",
+ CellChangeTimes->{3.9507493986384697`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"d84c671e-3bbd-234e-a9fe-3a09815905ee"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 9. Special Pythagorean Triplet", "Subtitle",
+ CellChangeTimes->{{3.9507497180144672`*^9, 
+  3.9507497239532356`*^9}},ExpressionUUID->"5555a4ed-9237-b143-8697-\
+19513fe066a0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a", " ", "b", " ", "c"}], "/.", 
+  RowBox[{"First", "@", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"a", "^", "2"}], "+", 
+         RowBox[{"b", "^", "2"}]}], "==", 
+        RowBox[{"c", "^", "2"}]}], ",", 
+       RowBox[{
+        RowBox[{"a", "+", "b", "+", "c"}], "==", "1000"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", "PositiveIntegers"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{3.9507497414489117`*^9},
+ CellLabel->"In[14]:=",ExpressionUUID->"e94653db-c78d-d448-84a9-3766e658341a"],
+
+Cell[BoxData["31875000"], "Output",
+ CellChangeTimes->{3.95074974932975*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"6bf2c184-5057-9b46-a494-0d24872614f8"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Problem 10. Summation of Primes", "Subtitle",
+ CellChangeTimes->{{3.9507497738494053`*^9, 
+  3.9507497939343624`*^9}},ExpressionUUID->"8dcd8e23-4500-b947-96f4-\
+32df41255c6e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{"Prime", "[", "i", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", 
+     RowBox[{"PrimePi", "[", "2000000", "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.950749812462307*^9, 3.95074983515633*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"e42e83b9-8559-794d-a3b9-0f1ef4b16f2b"],
+
+Cell[BoxData["142913828922"], "Output",
+ CellChangeTimes->{3.9507498367118225`*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"8308fbfc-c30c-6b49-849c-e9163541b0d1"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{950.25, 522.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (2023\:5e7412\:670812\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f0843440-4f01-f941-9058-2f5ad71d28ea"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 158, 3, 98, "Title",ExpressionUUID->"afe83d3e-9c5d-934a-a95e-9e4bafb7161b"],
+Cell[741, 27, 328, 5, 53, "Subtitle",ExpressionUUID->"72b43898-0a28-2b44-afec-51da70d0cdcc"],
+Cell[CellGroupData[{
+Cell[1094, 36, 550, 15, 43, "Input",ExpressionUUID->"2f9a631b-e002-724c-b8a5-a4f02f74b4e1"],
+Cell[1647, 53, 154, 2, 32, "Output",ExpressionUUID->"46f73280-9049-9642-a2a4-e5435d771b64"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1838, 60, 282, 4, 53, "Subtitle",ExpressionUUID->"06cfa948-2272-7a42-a71d-476e2fa8de6b"],
+Cell[CellGroupData[{
+Cell[2145, 68, 1112, 34, 97, "Input",ExpressionUUID->"e925536f-ca4c-a044-9302-ae34bd43459d"],
+Cell[3260, 104, 154, 2, 32, "Output",ExpressionUUID->"6219ea1e-3ecd-ce40-a1dd-d1252a83970a"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3463, 112, 230, 4, 53, "Subtitle",ExpressionUUID->"2c198477-d3f4-b64e-a684-2fc6e48857ae"],
+Cell[CellGroupData[{
+Cell[3718, 120, 247, 6, 43, "Input",ExpressionUUID->"15ad4b24-c9fe-7e4e-9fc8-c320aef2f7a1"],
+Cell[3968, 128, 174, 3, 32, "Output",ExpressionUUID->"2f05d64c-065e-9c4f-aa77-37da1fbb0e94"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4191, 137, 183, 3, 53, "Subtitle",ExpressionUUID->"85e9be4c-e61b-4c43-b1f8-5156eeaf23eb"],
+Cell[CellGroupData[{
+Cell[4399, 144, 917, 25, 64, "Input",ExpressionUUID->"d51e916d-fb3f-974a-8ee4-6739963102a7"],
+Cell[5319, 171, 200, 3, 32, "Output",ExpressionUUID->"f94f50da-53e8-f94d-b57a-ce988013bd1a"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5568, 180, 199, 3, 53, "Subtitle",ExpressionUUID->"0147fab4-cd61-9d4a-8522-9977b9400f45"],
+Cell[CellGroupData[{
+Cell[5792, 187, 791, 23, 78, "Input",ExpressionUUID->"ce895a85-d216-564c-baeb-bc22758c9cec"],
+Cell[6586, 212, 159, 2, 32, "Output",ExpressionUUID->"8926d42b-e3b1-f541-9463-22b0179b0f30"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6794, 220, 180, 3, 53, "Subtitle",ExpressionUUID->"7797d9e1-2c52-3f49-b310-f710195474d4"],
+Cell[CellGroupData[{
+Cell[6999, 227, 459, 13, 43, "Input",ExpressionUUID->"273e25dd-9d6b-0841-ab35-c9e5c0e452b0"],
+Cell[7461, 242, 155, 2, 32, "Output",ExpressionUUID->"a847196a-1673-0045-9d3d-b02537d2e1ff"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7665, 250, 173, 3, 53, "Subtitle",ExpressionUUID->"4e407fd9-3dfb-224f-9706-858e2b5cd31b"],
+Cell[CellGroupData[{
+Cell[7863, 257, 210, 3, 43, "Input",ExpressionUUID->"440516ce-0215-c940-877b-36b624891dbe"],
+Cell[8076, 262, 153, 2, 32, "Output",ExpressionUUID->"caebf9dd-977c-6f4c-bfbf-52352d082f13"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8278, 270, 186, 3, 53, "Subtitle",ExpressionUUID->"db8a267e-6ba3-2b42-8e60-c0ef7fb87d71"],
+Cell[CellGroupData[{
+Cell[8489, 277, 2191, 43, 70, "Input",ExpressionUUID->"c61ceb95-b5c2-874b-8f9e-e1a13e401415"],
+Cell[10683, 322, 160, 2, 32, "Output",ExpressionUUID->"d84c671e-3bbd-234e-a9fe-3a09815905ee"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10892, 330, 188, 3, 53, "Subtitle",ExpressionUUID->"5555a4ed-9237-b143-8697-19513fe066a0"],
+Cell[CellGroupData[{
+Cell[11105, 337, 655, 19, 43, "Input",ExpressionUUID->"e94653db-c78d-d448-84a9-3766e658341a"],
+Cell[11763, 358, 155, 2, 32, "Output",ExpressionUUID->"6bf2c184-5057-9b46-a494-0d24872614f8"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11967, 366, 181, 3, 53, "Subtitle",ExpressionUUID->"8dcd8e23-4500-b947-96f4-32df41255c6e"],
+Cell[CellGroupData[{
+Cell[12173, 373, 348, 8, 43, "Input",ExpressionUUID->"e42e83b9-8559-794d-a3b9-0f1ef4b16f2b"],
+Cell[12524, 383, 162, 2, 32, "Output",ExpressionUUID->"8308fbfc-c30c-6b49-849c-e9163541b0d1"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

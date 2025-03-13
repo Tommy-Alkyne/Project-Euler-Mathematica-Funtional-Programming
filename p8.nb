@@ -1,0 +1,117 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4076,        107]
+NotebookOptionsPosition[      3354,         85]
+NotebookOutlinePosition[      3780,        102]
+CellTagsIndexPosition[      3737,         99]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 8. Largest Product in a Series", "Subtitle",
+ CellChangeTimes->{{3.950749312962536*^9, 
+  3.9507493363482904`*^9}},ExpressionUUID->"75b51e13-7f8d-7a4e-828d-\
+6a5f8eec154e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"num", "=", 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       RowBox[{"Integer", "[", 
+         DynamicBox[
+          FEPrivate`FrontEndResource["FEBitmaps", "IconizeEllipsis"]], "]"}], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["464", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]},
+      "IconizedObject"]],
+    73167176531330624919225119674426574742355349194934969835203127745063262395\
+783180169848018694788518438586156078911294949545950173795833195285320880551112\
+540698747158523863050715693290963295227443043557668966489504452445231617318564\
+030987111217223831136222989342338030813533627661428280644448664523874930358907\
+296290491560440772390713810515859307960866701724271218839987979087922749219016\
+997208880937766572733300105336788122023542180975125454059475224352584907711670\
+556013604839586446706324415722155397536978179778461740649551492908625693219784\
+686224828397224137565705605749026140797296865241453510047482166370484403199890\
+008895243450658541227588666881164271714799244429282308634656748139191231628245\
+861786645835912456652947654568284891288314260769004224219022671055626321111109\
+370544217506941658960408071984038509624554443629812309878799272442849091888458\
+015616609791913387549920052406368991256071760605886116467109405077541002256983\
+15520005593572972571636269561882670428252483600823257530420752963450,
+    SelectWithContents->True,
+    Selectable->False]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Max", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Times", "@@", "#"}], "&"}], "/@", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"IntegerDigits", "[", "num", "]"}], ",", "13", ",", "1"}], 
+    "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.950749365216427*^9, 3.950749395179273*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"cab57515-c66b-a446-9b29-6dd9840c9649"],
+
+Cell[BoxData["23514624000"], "Output",
+ CellChangeTimes->{3.950749398638469*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"9f2a0d5f-aefc-8744-b4f0-5623aa17b392"]
+}, Open  ]],
+
+Cell["By Tommy@https://github.com/Tommy-Alkyne", "Text",
+ CellChangeTimes->{{3.950830425748958*^9, 
+  3.950830435184257*^9}},ExpressionUUID->"50cd63f5-5d53-4e43-93d3-\
+46307e4d9445"]
+}, Open  ]]
+},
+WindowSize->{583.5, 445.5},
+WindowMargins->{{183.375, Automatic}, {Automatic, 38.625}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (2023\:5e7412\:670812\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"41be9f78-871d-4247-9a4f-4af173c8cbbd"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 186, 3, 53, "Subtitle",ExpressionUUID->"75b51e13-7f8d-7a4e-828d-6a5f8eec154e"],
+Cell[CellGroupData[{
+Cell[791, 29, 2189, 43, 70, "Input",ExpressionUUID->"cab57515-c66b-a446-9b29-6dd9840c9649"],
+Cell[2983, 74, 158, 2, 32, "Output",ExpressionUUID->"9f2a0d5f-aefc-8744-b4f0-5623aa17b392"]
+}, Open  ]],
+Cell[3156, 79, 182, 3, 35, "Text",ExpressionUUID->"50cd63f5-5d53-4e43-93d3-46307e4d9445"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,109 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3089,         99]
+NotebookOptionsPosition[      2366,         77]
+NotebookOutlinePosition[      2792,         94]
+CellTagsIndexPosition[      2749,         91]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 2. Even Fibonacci Numbers", "Subtitle",
+ CellChangeTimes->{{3.950598743056395*^9, 3.95059874694678*^9}, {
+  3.950598785616319*^9, 3.9505987944238987`*^9}, {3.950688883049484*^9, 
+  3.950688885062418*^9}},ExpressionUUID->"46855c20-55ce-ae46-8517-\
+fc12b76b20f7"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"fib", "[", "1", "]"}], "=", "1"}], ";", 
+  RowBox[{
+   RowBox[{"fib", "[", "2", "]"}], "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"fib", "[", 
+    RowBox[{"n_Integer", "/;", 
+     RowBox[{"n", ">", "2"}]}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"fib", "[", "n", "]"}], "=", 
+    RowBox[{
+     RowBox[{"fib", "[", 
+      RowBox[{"n", "-", "1"}], "]"}], "+", 
+     RowBox[{"fib", "[", 
+      RowBox[{"n", "-", "2"}], "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"FoldWhile", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Plus", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Boole", "@", 
+        RowBox[{"EvenQ", "@", 
+         RowBox[{"fib", "[", "#2", "]"}]}]}], "*", 
+       RowBox[{"(", 
+        RowBox[{"fib", "[", "#2", "]"}], ")"}]}], ",", "#1"}], "]"}], "&"}], 
+   ",", "0", ",", 
+   RowBox[{"Range", "[", "4000000", "]"}], ",", 
+   RowBox[{
+    RowBox[{"TrueQ", "[", 
+     RowBox[{"#", "<=", "4000000"}], "]"}], "&"}]}], "]"}]}], "Input",
+ CellLabel->"In[4]:=",ExpressionUUID->"bb36d2e1-caec-ca4e-895a-7ccf0a055892"],
+
+Cell[BoxData["4613732"], "Output",
+ CellChangeTimes->{3.950688218592373*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"4e9b7df8-e3f8-7941-964c-fa59ecfcd0ba"]
+}, Open  ]],
+
+Cell["By Tommy@https://github.com/Tommy-Alkyne", "Text",
+ CellChangeTimes->{{3.9508303437006702`*^9, 
+  3.9508303639074135`*^9}},ExpressionUUID->"6fae1fdf-ef3c-284e-a607-\
+db2dd9c8bf0c"]
+}, Open  ]]
+},
+WindowSize->{583.5, 445.5},
+WindowMargins->{{183.375, Automatic}, {Automatic, 38.625}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (2023\:5e7412\:670812\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"82d13220-5bea-b846-a97e-a0517ba35303"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 275, 4, 53, "Subtitle",ExpressionUUID->"46855c20-55ce-ae46-8517-fc12b76b20f7"],
+Cell[CellGroupData[{
+Cell[880, 30, 1112, 34, 133, "Input",ExpressionUUID->"bb36d2e1-caec-ca4e-895a-7ccf0a055892"],
+Cell[1995, 66, 154, 2, 32, "Output",ExpressionUUID->"4e9b7df8-e3f8-7941-964c-fa59ecfcd0ba"]
+}, Open  ]],
+Cell[2164, 71, 186, 3, 35, "Text",ExpressionUUID->"6fae1fdf-ef3c-284e-a607-db2dd9c8bf0c"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

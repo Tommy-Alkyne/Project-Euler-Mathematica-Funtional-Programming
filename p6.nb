@@ -1,0 +1,87 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2334,         77]
+NotebookOptionsPosition[      1613,         55]
+NotebookOutlinePosition[      2039,         72]
+CellTagsIndexPosition[      1996,         69]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 6. Sum Square Difference", "Subtitle",
+ CellChangeTimes->{{3.950748536671316*^9, 
+  3.950748546242333*^9}},ExpressionUUID->"bf5361f6-3af7-a744-a102-\
+03257f18a94c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Sum", "[", 
+    RowBox[{"i", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "100"}], "}"}]}], "]"}], "^", "2"}], "-", 
+  RowBox[{"Sum", "[", 
+   RowBox[{
+    RowBox[{"i", "^", "2"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "100"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.950748564858961*^9, 3.950748585990282*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"23cbed46-5e59-6242-a403-56698ce06c9b"],
+
+Cell[BoxData["25164150"], "Output",
+ CellChangeTimes->{3.950748593504423*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"5d374b38-bdb3-b04a-b3d6-a5893631325c"]
+}, Open  ]],
+
+Cell["By Tommy@https://github.com/Tommy-Alkyne", "Text",
+ CellChangeTimes->{{3.950830425748958*^9, 
+  3.950830435184257*^9}},ExpressionUUID->"014938b7-1a4c-b548-84a6-\
+8a6b535c3e9c"]
+}, Open  ]]
+},
+WindowSize->{583.5, 445.5},
+WindowMargins->{{183.375, Automatic}, {Automatic, 38.625}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (2023\:5e7412\:670812\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"82272051-53ff-fe4a-958f-c121d4a616d1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 178, 3, 53, "Subtitle",ExpressionUUID->"bf5361f6-3af7-a744-a102-03257f18a94c"],
+Cell[CellGroupData[{
+Cell[783, 29, 459, 13, 43, "Input",ExpressionUUID->"23cbed46-5e59-6242-a403-56698ce06c9b"],
+Cell[1245, 44, 155, 2, 32, "Output",ExpressionUUID->"5d374b38-bdb3-b04a-b3d6-a5893631325c"]
+}, Open  ]],
+Cell[1415, 49, 182, 3, 35, "Text",ExpressionUUID->"014938b7-1a4c-b548-84a6-8a6b535c3e9c"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

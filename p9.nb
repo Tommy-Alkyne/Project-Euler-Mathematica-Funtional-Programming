@@ -1,0 +1,93 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2538,         83]
+NotebookOptionsPosition[      1817,         61]
+NotebookOutlinePosition[      2243,         78]
+CellTagsIndexPosition[      2200,         75]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 9. Special Pythagorean Triplet", "Subtitle",
+ CellChangeTimes->{{3.9507497180144672`*^9, 
+  3.9507497239532347`*^9}},ExpressionUUID->"bf6a23c0-94cd-c24b-a9a2-\
+f70510df2bd2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a", " ", "b", " ", "c"}], "/.", 
+  RowBox[{"First", "@", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"a", "^", "2"}], "+", 
+         RowBox[{"b", "^", "2"}]}], "==", 
+        RowBox[{"c", "^", "2"}]}], ",", 
+       RowBox[{
+        RowBox[{"a", "+", "b", "+", "c"}], "==", "1000"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", "PositiveIntegers"}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{3.950749741448912*^9},
+ CellLabel->"In[14]:=",ExpressionUUID->"ee276bb8-fb4d-5444-a9f0-8130c77ce355"],
+
+Cell[BoxData["31875000"], "Output",
+ CellChangeTimes->{3.95074974932975*^9},
+ CellLabel->"Out[14]=",ExpressionUUID->"f21f2765-9fc4-aa40-bf7d-e32399baf3a5"]
+}, Open  ]],
+
+Cell["By Tommy@https://github.com/Tommy-Alkyne", "Text",
+ CellChangeTimes->{{3.950830425748958*^9, 
+  3.950830435184257*^9}},ExpressionUUID->"c981f395-3905-7747-b2c1-\
+d9f7f0477b05"]
+}, Open  ]]
+},
+WindowSize->{583.5, 445.5},
+WindowMargins->{{183.375, Automatic}, {Automatic, 38.625}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (2023\:5e7412\:670812\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"48689a6a-9e94-3f4b-aeee-a1796767c97f"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 188, 3, 53, "Subtitle",ExpressionUUID->"bf6a23c0-94cd-c24b-a9a2-f70510df2bd2"],
+Cell[CellGroupData[{
+Cell[793, 29, 653, 19, 97, "Input",ExpressionUUID->"ee276bb8-fb4d-5444-a9f0-8130c77ce355"],
+Cell[1449, 50, 155, 2, 32, "Output",ExpressionUUID->"f21f2765-9fc4-aa40-bf7d-e32399baf3a5"]
+}, Open  ]],
+Cell[1619, 55, 182, 3, 35, "Text",ExpressionUUID->"c981f395-3905-7747-b2c1-d9f7f0477b05"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,82 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2193,         72]
+NotebookOptionsPosition[      1473,         50]
+NotebookOutlinePosition[      1899,         67]
+CellTagsIndexPosition[      1856,         64]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 3. Largest Prime Factor", "Subtitle",
+ CellChangeTimes->{{3.950688192769363*^9, 3.9506882106764793`*^9}, {
+  3.95074945855104*^9, 
+  3.950749459916975*^9}},ExpressionUUID->"342f277f-7dde-c446-81da-\
+fd1a992c11fd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TakeLargest", "[", 
+  RowBox[{
+   RowBox[{"Flatten", "@", 
+    RowBox[{"FactorInteger", "@", "600851475143"}]}], ",", "1"}], 
+  "]"}]], "Input",
+ CellLabel->"In[15]:=",ExpressionUUID->"28ed4d15-fd01-0c40-b45a-c8c69e50418f"],
+
+Cell[BoxData[
+ RowBox[{"{", "6857", "}"}]], "Output",
+ CellChangeTimes->{3.950688429630327*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"3a0a24ce-34f3-7c49-b0b3-342b5eb78e57"]
+}, Open  ]],
+
+Cell["By Tommy@https://github.com/Tommy-Alkyne", "Text",
+ CellChangeTimes->{{3.9508304257489586`*^9, 
+  3.9508304351842575`*^9}},ExpressionUUID->"6e70baa5-a399-fb43-96ad-\
+cabded019bf1"]
+}, Open  ]]
+},
+WindowSize->{583.5, 445.5},
+WindowMargins->{{183.375, Automatic}, {Automatic, 38.625}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (2023\:5e7412\:670812\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f99c7062-08fe-594e-a028-52addad97f14"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 227, 4, 53, "Subtitle",ExpressionUUID->"342f277f-7dde-c446-81da-fd1a992c11fd"],
+Cell[CellGroupData[{
+Cell[832, 30, 247, 6, 43, "Input",ExpressionUUID->"28ed4d15-fd01-0c40-b45a-c8c69e50418f"],
+Cell[1082, 38, 174, 3, 32, "Output",ExpressionUUID->"3a0a24ce-34f3-7c49-b0b3-342b5eb78e57"]
+}, Open  ]],
+Cell[1271, 44, 186, 3, 35, "Text",ExpressionUUID->"6e70baa5-a399-fb43-96ad-cabded019bf1"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

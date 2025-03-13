@@ -1,0 +1,82 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2230,         72]
+NotebookOptionsPosition[      1510,         50]
+NotebookOutlinePosition[      1936,         67]
+CellTagsIndexPosition[      1893,         64]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 10. Summation of Primes", "Subtitle",
+ CellChangeTimes->{{3.9507497738494053`*^9, 
+  3.9507497939343624`*^9}},ExpressionUUID->"335aa191-8351-4c42-9ebf-\
+46b38a595387"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{"Prime", "[", "i", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", 
+     RowBox[{"PrimePi", "[", "2000000", "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.950749812462307*^9, 3.95074983515633*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"328a0260-74a0-7b40-a43c-d680b482fa1f"],
+
+Cell[BoxData["142913828922"], "Output",
+ CellChangeTimes->{3.950749836711822*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"af9ce222-0c5b-0548-97df-4b2d21e47e30"]
+}, Open  ]],
+
+Cell["By Tommy@https://github.com/Tommy-Alkyne", "Text",
+ CellChangeTimes->{{3.950830425748958*^9, 
+  3.950830435184257*^9}},ExpressionUUID->"1049a293-ee51-e54f-8da8-\
+d84b7615e7bd"]
+}, Open  ]]
+},
+WindowSize->{583.5, 445.5},
+WindowMargins->{{183.375, Automatic}, {Automatic, 38.625}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (2023\:5e7412\:670812\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8d1ce5a2-ec87-4441-9ff2-7ad7375bf922"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 181, 3, 53, "Subtitle",ExpressionUUID->"335aa191-8351-4c42-9ebf-46b38a595387"],
+Cell[CellGroupData[{
+Cell[786, 29, 348, 8, 43, "Input",ExpressionUUID->"328a0260-74a0-7b40-a43c-d680b482fa1f"],
+Cell[1137, 39, 160, 2, 32, "Output",ExpressionUUID->"af9ce222-0c5b-0548-97df-4b2d21e47e30"]
+}, Open  ]],
+Cell[1312, 44, 182, 3, 35, "Text",ExpressionUUID->"1049a293-ee51-e54f-8da8-d84b7615e7bd"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

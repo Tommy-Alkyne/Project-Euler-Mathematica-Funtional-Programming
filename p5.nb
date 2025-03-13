@@ -1,0 +1,97 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 14.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2694,         87]
+NotebookOptionsPosition[      1972,         65]
+NotebookOutlinePosition[      2398,         82]
+CellTagsIndexPosition[      2355,         79]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Problem 5. Smallest Multiple", "Subtitle",
+ CellChangeTimes->{{3.950744799281828*^9, 3.950744802712906*^9}, 
+   3.9507448331379433`*^9},ExpressionUUID->"4749cfab-c26b-bd4a-8355-\
+63b7f3e39b55"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Apply", "[", 
+  RowBox[{"Times", ",", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "^", 
+      RowBox[{"Max", "[", 
+       RowBox[{"Last", "/@", 
+        RowBox[{"Cases", "[", 
+         RowBox[{
+          RowBox[{"Flatten", "[", 
+           RowBox[{
+            RowBox[{"FactorInteger", "/@", 
+             RowBox[{"Range", "[", "20", "]"}]}], ",", "1"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"#", ",", "_"}], "}"}]}], "]"}]}], "]"}]}], "&"}], "/@", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Prime", "[", "i", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"PrimePi", "[", "20", "]"}]}], "}"}]}], "]"}]}]}], 
+  "]"}]], "Input",
+ CellLabel->"In[31]:=",ExpressionUUID->"7548b8d9-d165-7145-acc4-de8dd74315d6"],
+
+Cell[BoxData["232792560"], "Output",
+ CellChangeTimes->{3.950744851948603*^9},
+ CellLabel->"Out[31]=",ExpressionUUID->"4651a597-645c-074e-9d92-f29250191c96"]
+}, Open  ]],
+
+Cell["By Tommy@https://github.com/Tommy-Alkyne", "Text",
+ CellChangeTimes->{{3.9508305069104767`*^9, 
+  3.9508305154485207`*^9}},ExpressionUUID->"4f317a0e-161f-0d49-95f8-\
+3cb247acda18"]
+}, Open  ]]
+},
+WindowSize->{583.5, 445.5},
+WindowMargins->{{183.375, Automatic}, {Automatic, 38.625}},
+FrontEndVersion->"14.0 for Microsoft Windows (64-bit) (2023\:5e7412\:670812\
+\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f768b557-e816-7442-a178-3f659d8bd7a0"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 199, 3, 53, "Subtitle",ExpressionUUID->"4749cfab-c26b-bd4a-8355-63b7f3e39b55"],
+Cell[CellGroupData[{
+Cell[804, 29, 791, 23, 114, "Input",ExpressionUUID->"7548b8d9-d165-7145-acc4-de8dd74315d6"],
+Cell[1598, 54, 157, 2, 32, "Output",ExpressionUUID->"4651a597-645c-074e-9d92-f29250191c96"]
+}, Open  ]],
+Cell[1770, 59, 186, 3, 35, "Text",ExpressionUUID->"4f317a0e-161f-0d49-95f8-3cb247acda18"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
